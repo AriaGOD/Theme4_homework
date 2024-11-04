@@ -47,7 +47,7 @@ class HanoiTower:
     def solve(self, n, source, target, support):
         # Двигает диски с использованием стержня support
         if n == 1:
-            # Один диск -  перемещаем его на target стержень
+            # Один диск -  перемещает его на target стержень
             self.move_disk(source, target)
         else:
             if self.num_towers == 3:
@@ -84,7 +84,7 @@ def main():
     # Создает и очищает файл, записывая в него начальные условия
     with open('Решение.txt', 'w') as file:
         file.write(f'Решение для {num_disks} дисков и {num_towers} стержней:\n')
-    # Создание экземпляра класса "HanoiTower" и решение задачи
+    # Создает экземпляр класса "HanoiTower" и решает задачу
     hanoi = HanoiTower(num_disks, num_towers, canvas)
     hanoi.solve(num_disks, 1, 3, 2) # Старт с первого стержня, конец на третьем, вспомогательный — второй
 
